@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bäckerei Russ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Einfaches CSS für das Menüband und die Farben */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5; /* Hellerer Creme-Hintergrund */
+            color: #000; /* Schwarze Schrift */
+            margin: 0;
+        }
+        header {
+            color: #006400; /* Sattes Dunkelgrün */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em; /* Größere Schriftgröße für den Titel */
+        }
+        header p {
+            font-size: 1.2em; /* Größere Schriftgröße für den Text */
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 20px;
+            transition: left 0.3s;
+        }
+        .menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .menu a:hover {
+            background-color: #575757;
+        }
+        .menu-toggle {
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            padding: 10px;
+        }
+        .menu-toggle:hover {
+            color: #575757;
+        }
+        section {
+            padding: 20px;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-info div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info h2 {
+            text-align: center;
+            width: 100%;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="menu" id="menu">
+        <a href="#aktuelles">Aktuelles</a>
+        <a href="#oeffnungszeiten">Öffnungszeiten</a>
+        <a href="#adresse">Adresse</a>
+        <a href="about.html">Über uns</a>
+        <a href="products.html">Unsere Produkte</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="imprint.html">Impressum</a>
+        <a href="privacy.html">Datenschutz</a>
+    </div>
+    <header>
+        <h1>Bäckerei Russ</h1>
+        <p>Sauerteigbäckerei im ländlichen Raum im schönen Orsingen im Hegau. Handwerklich hergestellt mit regionalen Zutaten, zur Unterstützung landwirtschaftlicher Betriebe in der Region. Spezialisiert auf Sauerteigprodukte von Brot bis Feingebäck.</p>
+    </header>
+    <section id="aktuelles">
+        <h2>Aktuelles</h2>
+        <div class="image-placeholder">Aktuelles Platzhalter</div>
+    </section>
+    <div class="contact-info">
+        <h2>Kontakt und Anfahrt</h2>
+        <div>
+            <div>
+                <p>Adresse:</p>
+                <p>Orsingerstraße 8</p>
+                <p>78359 Orsingen-Nenzingen</p>
+                <p>Mail: <a href="mailto:info@baeckerei-russ.de" style="color: white;">info@baeckerei-russ.de</a></p>
+                <p>Anfahrt: <a href="https://www.google.com/maps?q=Orsingerstraße+8,+78359+Orsingen-Nenzingen" target="_blank" style="color: white;">Google Maps</a></p>
+            </div>
+            <div>
+                <p>Öffnungszeiten:</p>
+                <p>Dienstag – Freitag: 6.00-12.30 und 14.30-18.00</p>
+                <p>Samstag: 6.00-12.30</p>
+                <p>Sonntag und Montag: Ruhetag/geschlossen</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><a href="imprint.html" style="color: white;">Impressum</a> | <a href="privacy.html" style="color: white;">Datenschutz</a></p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.left === '0px') {
+                menu.style.left = '-250px';
+            } else {
+                menu.style.left = '0px';
+            }
+        }
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
